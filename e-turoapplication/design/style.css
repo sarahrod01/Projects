@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/*.step-wizard {
+    background-color: #21d4fd;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.step-wizard-list{
+    background: #fff;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+    color: #333;
+    list-style-type: none;
+    border-radius: 10px;
+    display: row;
+    padding: 20px 10px;
+    position: relative;
+    //z-index: 2;
+}*/
+
+.step-wizard-item{
+	margin-top: 5px;
+    padding: 0 20px;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive:1;
+    flex-grow: 1;
+    max-width: 100%;
+    display: row;
+    flex-direction: column;
+    text-align: center;
+    min-width: 170px;
+    position: relative;
+}
+.step-wizard-item + .step-wizard-item:after{
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 10px;
+    background: #21d4fd;
+    width: 25%;
+    height: 2px;
+    //transform: translateX(-10%);
+	rotate: 90deg;
+}
+
+@media only screen and (max-width: 400px) {
+	.step-wizard-item + .step-wizard-item:after{
+		content: "";
+		position: absolute;
+		left: -21px;
+		top: 10px;
+		background: #21d4fd;
+		width: 30%;
+		height: 2px;
+		//transform: translateX(-10%);
+		rotate: 90deg;
+	}
+}
+.progress-count{
+    height: 40px;
+    width:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+    margin: 0 auto;
+    position: relative;
+    z-index:10;
+    color: transparent;
+}
+.progress-count:after{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: #21d4fd;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+	margin-top: 30px;
+	margin-left: -105px;
+    //z-index: -10;
+}
+.progress-count:before{
+    content: "";
+    height: 10px;
+    width: 20px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%) rotate(-45deg);
+    transform-origin: center center;
+}
+.progress-label{
+    font-size: 14px;
+    font-weight: 600;
+	//margin-right: -40px;
+	margin-top: -50px;
+}
+.current-item .progress-count:before,
+.current-item ~ .step-wizard-item .progress-count:before{
+    display: none;
+}
+.current-item ~ .step-wizard-item .progress-count:after{
+    height:10px;
+    width:10px;
+}
+.current-item ~ .step-wizard-item .progress-label{
+    opacity: 0.5;
+}
+.current-item .progress-count:after{
+    background: #fff;
+    border: 2px solid #21d4fd;
+}
+.current-item .progress-count{
+    color: #21d4fd;
+}
+
+
+/*.dropdown-wizard-item{
+	//margin-top: 1px;
+    padding: 0 20px;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive:1;
+    flex-grow: 1;
+    max-width: 100%;
+    display: row;
+    flex-direction: column;
+    text-align: center;
+    min-width: 170px;
+    position: relative;
+}
+
+.dropdown-wizard-item + .dropdown-wizard-item:after{
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    background: #21d4fd;
+    width: 29%;
+    height: 2px;
+    //transform: translateX(-10%);
+	rotate: 90deg;
+}
+
+.dropdown-progress-label{
+    font-size: 14px;
+    font-weight: 600;
+	margin-right: 50px;
+	margin-top: -50px;
+}
+
+.dropdown-progress-count{
+    height: 40px;
+    width:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+    margin: 0 auto;
+    position: relative;
+    z-index:10;
+    color: transparent;
+}
+.dropdown-progress-count:after{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: #21d4fd;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+	margin-top: 30px;
+	margin-left: -100px;
+    //z-index: -10;
+}
+.dropdown-progress-count:before{
+    content: "";
+    height: 10px;
+    width: 20px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%) rotate(-45deg);
+    transform-origin: center center;
+}*/
